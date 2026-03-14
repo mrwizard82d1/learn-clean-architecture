@@ -1,0 +1,33 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".template.config/template.json" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ArdalisCleanArch.Core/ArdalisCleanArch.Core.csproj" />
+    <Project Path="src/ArdalisCleanArch.Infrastructure/ArdalisCleanArch.Infrastructure.csproj" />
+    <Project Path="src/ArdalisCleanArch.UseCases/ArdalisCleanArch.UseCases.csproj" />
+    <Project Path="src/ArdalisCleanArch.Web/ArdalisCleanArch.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/_aspire/">
+    <Project Path="src/ArdalisCleanArch.AspireHost/ArdalisCleanArch.AspireHost.csproj" />
+    <Project Path="src/ArdalisCleanArch.ServiceDefaults/ArdalisCleanArch.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ArdalisCleanArch.FunctionalTests/ArdalisCleanArch.FunctionalTests.csproj">
+      <BuildDependency Project="src/ArdalisCleanArch.Web/ArdalisCleanArch.Web.csproj" />
+    </Project>
+    <Project Path="tests/ArdalisCleanArch.IntegrationTests/ArdalisCleanArch.IntegrationTests.csproj">
+      <BuildDependency Project="src/ArdalisCleanArch.Infrastructure/ArdalisCleanArch.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/ArdalisCleanArch.UnitTests/ArdalisCleanArch.UnitTests.csproj" />
+  </Folder>
+</Solution>

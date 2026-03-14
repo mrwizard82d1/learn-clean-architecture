@@ -1,0 +1,9 @@
+﻿global using System.Runtime.CompilerServices;
+global using Ardalis.SharedKernel;
+global using ArdalisCleanArch.Core.ContributorAggregate;
+global using ArdalisCleanArch.UseCases.Contributors.Create;
+global using Shouldly;
+global using Mediator;
+global using Microsoft.Extensions.Logging;
+global using NSubstitute;
+global using Xunit;
