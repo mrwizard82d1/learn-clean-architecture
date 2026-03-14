@@ -1,0 +1,71 @@
+2026-03-14 17:28:47.053 -05:00 [INF] Registered 5 endpoints in 562 milliseconds.
+2026-03-14 17:28:47.985 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2026-03-14 17:28:48.040 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL
+);
+2026-03-14 17:28:48.152 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2026-03-14 17:28:48.177 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+2026-03-14 17:28:48.260 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2026-03-14 17:28:48.269 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2026-03-14 17:28:48.431 -05:00 [INF] Now listening on: http://localhost:57679
+2026-03-14 17:28:48.431 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-14 17:28:48.431 -05:00 [INF] Hosting environment: Development
+2026-03-14 17:28:48.431 -05:00 [INF] Content root path: /Users/larry/professional/projects/learn-clean-architecture/csharp/NimblePros/clean-arch-dotnet8/NimbleProsWebinar.Demo/src/NimbleProsWebinar.Demo.Web
+2026-03-14 17:28:48.958 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679//swagger - null null
+2026-03-14 17:28:49.059 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679//swagger - 302 0 null 102.3198ms
+2026-03-14 17:28:49.064 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2026-03-14 17:28:49.740 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 676.3276ms
+2026-03-14 17:28:49.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui.css - null null
+2026-03-14 17:28:49.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-bundle.js - null null
+2026-03-14 17:28:49.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.css - null null
+2026-03-14 17:28:49.762 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-14 17:28:49.770 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-03-14 17:28:49.771 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.css - 200 218 text/css 9.5324ms
+2026-03-14 17:28:49.785 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-14 17:28:49.785 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-14 17:28:49.785 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-14 17:28:49.790 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-bundle.js - 200 1385018 text/javascript 28.9568ms
+2026-03-14 17:28:49.790 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-standalone-preset.js - 200 230642 text/javascript 28.1812ms
+2026-03-14 17:28:49.790 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui.css - 200 151213 text/css 29.0562ms
+2026-03-14 17:28:49.994 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2026-03-14 17:28:50.007 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/favicon-32x32.png - null null
+2026-03-14 17:28:50.008 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-03-14 17:28:50.008 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/favicon-32x32.png - 200 628 image/png 1.1657ms
+2026-03-14 17:28:50.009 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-03-14 17:28:50.364 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 369.335ms
+2026-03-14 17:29:01.195 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/ - null null
+2026-03-14 17:29:01.202 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-03-14 17:29:01.204 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/ - 404 0 null 9.4054ms
+2026-03-14 17:29:01.215 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:57679/, Response status code: 404
+2026-03-14 17:29:09.554 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/home - null null
+2026-03-14 17:29:09.554 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/home - 404 0 null 0.5617ms
+2026-03-14 17:29:09.555 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:57679/home, Response status code: 404
+2026-03-14 17:31:02.730 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/Contributors - null null
+2026-03-14 17:31:02.733 -05:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2026-03-14 17:31:02.761 -05:00 [INF] Handling ListContributorsQuery
+2026-03-14 17:31:02.761 -05:00 [INF] Property Skip : null
+2026-03-14 17:31:02.761 -05:00 [INF] Property Take : null
+2026-03-14 17:31:02.815 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Name"
+FROM (
+    SELECT Id, Name FROM Contributors
+) AS "n"
+2026-03-14 17:31:02.818 -05:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[NimbleProsWebinar.Demo.UseCases.Contributors.ContributorDTO]] in 56 ms
+2026-03-14 17:31:02.829 -05:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2026-03-14 17:31:02.833 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/Contributors - 200 null application/json 102.719ms
+2026-03-14 17:32:01.353 -05:00 [INF] Application is shutting down...
